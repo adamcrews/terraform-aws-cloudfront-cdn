@@ -60,7 +60,7 @@ related:
 
 # Short description of this project
 description: |-
-  Terraform Module that implements a CloudFront Distribution (CDN) for a custom origin (e.g. website) and [ships logs to a bucket](https://github.com/cloudposse/terraform-aws-log-storage). 
+  Terraform Module that implements a CloudFront Distribution (CDN) for a custom origin (e.g. website) and [ships logs to a bucket](https://github.com/cloudposse/terraform-aws-log-storage).
 
   If you need to accelerate an S3 bucket, we suggest using [`terraform-aws-cloudfront-s3-cdn`](https://github.com/cloudposse/terraform-aws-cloudfront-s3-cdn) instead.
 
@@ -90,6 +90,7 @@ usage: |-
   ```
   aws acm request-certificate --domain-name example.com --subject-alternative-names a.example.com b.example.com *.c.example.com
   ```
+  Also note that acm certificates to be used by CloudFront must be created in the us-east-1 region.
 
 include:
   - "docs/targets.md"
@@ -105,3 +106,5 @@ contributors:
     github: "aknysh"
   - name: "Justin Burnham"
     github: "jburnham"
+  - name: "Adam Crews"
+    github: "adamcrews"
